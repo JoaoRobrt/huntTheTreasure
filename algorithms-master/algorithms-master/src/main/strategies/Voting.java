@@ -35,7 +35,7 @@ public class Voting implements Strategy {
                 }else {
                 voting.put(p, voting.get(p) + 1);
             }
-            
+
         }
        return getMostVotedPoint(voting);
     }
@@ -48,7 +48,7 @@ public class Voting implements Strategy {
                 biggestValues = entry.getValue();
                 point = entry.getKey();
             }else{
-                
+                //colocar uma alternativa caso sejam pontos diferentes.
             }
         }
         return point;
