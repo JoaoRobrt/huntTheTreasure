@@ -6,4 +6,6 @@ public class MapOfTreasure extends Obstacle{
 		super(coordinates);
 	}
 
+
+
 }

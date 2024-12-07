@@ -8,13 +8,14 @@ import main.strategies.Sort;
 import main.strategies.ShortestDistance;
 import main.strategies.FewerObstacles;
 import main.strategies.Voting;
+import main.strategies.binaryTree.BinaryTree;
 
 public class Game {
 	private GameMap gameMap;
 	private Player player;
 	public Game() {
 		this.gameMap = new GameMap(8, 8);
-		this.player = new Player(new Sort());
+		this.player = new Player(new BinaryTree(this.gameMap));
 	}
 
 	public void run() {
