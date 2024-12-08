@@ -64,7 +64,7 @@ public class FewerObstacles implements Strategy {
 				continue;
 			} else {
 
-				if (	scenario[p.getPositionX()][p.getPositionY()].equals("X") ||
+				if (	scenario[p.getPositionX()][p.getPositionY()].equals("O") ||
 						gameMap.get(currentPoint).equals(Rock.CHARACTER) ||
 						gameMap.get(currentPoint).equals(Monster.CHARACTER)) {
 					count++;

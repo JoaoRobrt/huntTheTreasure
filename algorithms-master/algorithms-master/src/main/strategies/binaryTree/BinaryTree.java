@@ -19,6 +19,7 @@ public class BinaryTree implements Strategy{
     private NodeTree<String> root;
     private List<NodeTree<String>> sequenceSelected;
     private GameMap gameMap;
+    private GameMap treasureChests;
 
 
     public BinaryTree(GameMap map){
@@ -91,7 +92,6 @@ public class BinaryTree implements Strategy{
     public void DFS (NodeTree<String> node){
         LinkedList<NodeTree<String>> path = new LinkedList<>();
         preOrder(node, TreasureChest.CHARACTER, path);
-        //criar função de localizar o mapa.
         this.sequenceSelected = path;
     }
 

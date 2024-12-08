@@ -186,7 +186,7 @@ public class GameMap {
 
 	public void moveRobot(Point nextPoint) {
 		this.scenario[nextPoint.getPositionX()][nextPoint.getPositionY()] = Player.CHARACTER;
-		this.scenario[this.robotLocation.getPositionX()][this.robotLocation.getPositionY()] = "X";
+		this.scenario[this.robotLocation.getPositionX()][this.robotLocation.getPositionY()] = "O";
 		this.robotLocation = nextPoint;
 	}
 
