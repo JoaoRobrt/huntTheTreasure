@@ -3,8 +3,11 @@ package main;
 import main.game.Game;
 import main.game.map.GameMap;
 
+import java.text.DecimalFormat;
+
 public class Execute {
 	public static void main(String[] args) {
+		DecimalFormat df = new DecimalFormat("#");
 
 		int totalNumMoves = 0;
 		int runs = 100;
@@ -34,7 +37,7 @@ public class Execute {
 
 			double averageNumMoves = (double) totalNumMoves / runsWithMoves;
 			System.out.println("Total de partidas:  " + runs);
-			System.out.println("Média de jogadas por partida: " + averageNumMoves);
+			System.out.println("Média de jogadas por partida: " + df.format(averageNumMoves));
 			System.out.println("Partidas sem caminho aparente: " + cantFindPath);
 			System.out.println("Total de tesouros encontrados: " + totalTreasuresFound);
 			System.out.println("Total de armadilhas encontradas: " + totalTrapsFound);
