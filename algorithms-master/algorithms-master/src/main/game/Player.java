@@ -15,7 +15,7 @@ public class Player {
 		this.strategy = strategy;
 	}
 	
-	public Point evaluatePossbileNextStep(GameMap gameMap) {
+	public Point evaluatePossibleNextStep(GameMap gameMap) {
 		Point robotLocation = gameMap.getRobotLocation();
 		List<Point> possibleNextSteps = new ArrayList<>();
 		possibleNextSteps.add(new Point(robotLocation.getPositionX(), robotLocation.getPositionY() + 1));

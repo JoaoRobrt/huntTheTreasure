@@ -1,5 +1,7 @@
 package main.strategies.binaryTree;
 
+import org.w3c.dom.Node;
+
 public class NodeTree<T> {
 
     private T value;
@@ -65,4 +67,5 @@ public class NodeTree<T> {
     public boolean isNILL(){
         return this.getValue() == null;
     }
+
 }

@@ -24,7 +24,6 @@ public class BinaryTree implements Strategy{
 
     public BinaryTree(GameMap map){
         map.print();
-        System.out.println("");
         this.gameMap = map;
         this.root = new NodeTree<>();
         this.sequenceSelected = new LinkedList<>();
@@ -92,6 +91,10 @@ public class BinaryTree implements Strategy{
     public void DFS (NodeTree<String> node){
         LinkedList<NodeTree<String>> path = new LinkedList<>();
         preOrder(node, TreasureChest.CHARACTER, path);
+        if(path.size() == 0){
+             System.out.println("Não foi possível encontrar o tesouro");
+            return;
+        }
         this.sequenceSelected = path;
     }
 
@@ -110,7 +113,6 @@ public class BinaryTree implements Strategy{
         }
 
         path.removeLast();
-        System.out.println("");
         return false;
     }
 
